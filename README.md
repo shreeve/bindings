@@ -1,6 +1,6 @@
 # bindings
 
-```bindings``` is a Ruby gem that allows the bindings of calling methods to be accessed without a C extension. It does this by using fiddle, Ruby's built-in support for accessing native C methods. Using this gem, you can easily access variables from calling methods, which makes it very easy to implement templating system or other utilities that need similar access.
+```bindings``` is a Ruby gem that allows the bindings of calling methods to be accessed without a C extension. It does this by using ```fiddle```, Ruby's built-in support for accessing native C methods. Using this gem, you can easily access variables from calling methods, which makes it very easy to implement templating system or other utilities that need similar access.
 
 ## Usage
 
