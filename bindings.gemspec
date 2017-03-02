@@ -2,13 +2,15 @@
 
 Gem::Specification.new do |s|
   s.name        = "bindings"
-  s.version     = "0.9"
+  s.version     = "0.9.1"
   s.summary     = "Access bindings of calling methods (uses fiddle instead of C calls)."
   s.description = <<-EOT
 This gem allows the bindings of calling methods to be accessed without a C extension.
 It does this by using fiddle, Ruby's built-in support for accessing native C methods.
 Using this gem, you can easily access variables from calling methods, which makes it
 very easy to implement templating system or other utilities that need similar access.
+
+NOTE: This 0.9.1 version will load a bindings.so extension, if found.
 EOT
   s.homepage    = "https://github.com/shreeve/bindings"
   s.authors     = ["Steve Shreeve"]

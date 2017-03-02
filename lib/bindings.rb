@@ -6,6 +6,12 @@
 #  Legal: MIT License
 # =============================================================================
 
+begin
+  require 'bindings.so'
+  return
+rescue LoadError
+end
+
 require 'fiddle/import'
 
 module Fiddle
