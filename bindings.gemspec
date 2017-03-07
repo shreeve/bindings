@@ -2,22 +2,18 @@
 
 Gem::Specification.new do |s|
   s.name        = "bindings"
-  s.version     = "0.9.3"
-  s.summary     = "Access bindings of calling methods (uses fiddle instead of C calls)."
-  s.description = <<-EOT
-This gem allows the bindings of calling methods to be accessed without a C extension.
-It does this by using fiddle, Ruby's built-in support for accessing native C methods.
-Using this gem, you can easily access variables from calling methods, which makes it
-very easy to implement templating system or other utilities that need similar access.
-
-NOTE: This 0.9.3 version will load a bindings.so extension, if found.
-EOT
-  s.homepage    = "https://github.com/shreeve/bindings"
-  s.authors     = ["Steve Shreeve"]
+  s.version     = "1.0.0"
+  s.author      = "Steve Shreeve"
   s.email       = "steve.shreeve@gmail.com"
+  s.summary     = "Access the lexical binding scope of a calling method"
+  s.description = "This gem lets you access variables from a calling method."
+  s.homepage    = "https://github.com/shreeve/bindings"
   s.license     = "MIT"
-  s.files       = `git ls-files`.split("\n") - %w[.gitignore]
   s.platform    = Gem::Platform::RUBY
-  s.cert_chain  = ["certs/shreeve.pem"]
-  s.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
+  s.files       = `git ls-files`.split("\n") - %w[.gitignore]
+  s.extensions << 'ext/bindings/extconf.rb'
+  s.add_development_dependency "bundler", "~> 1.5"
+  s.add_development_dependency "rake"
+  s.add_development_dependency "rake-compiler"
+  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
 end
