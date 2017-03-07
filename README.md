@@ -32,7 +32,7 @@ class C
     puts Binding.of_caller(1).eval('local_variables') # b
     puts Binding.of_caller(2).eval('local_variables') # a
     puts Binding.of_caller(3).eval('local_variables') # outer
-    puts Binding.of_caller(9).eval('local_variables') rescue puts($!)
+    puts Binding.of_caller(999).eval('local_variables') rescue puts($!)
   end
 end
 
